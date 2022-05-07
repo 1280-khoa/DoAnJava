@@ -96,14 +96,29 @@ public class frmKiemKe extends javax.swing.JFrame {
         btnKK1.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnKK1.setText("Hàng tồn");
         btnKK1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnKK1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKK1ActionPerformed(evt);
+            }
+        });
 
         btnKK.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnKK.setText("Hàng hết");
         btnKK.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnKK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKKActionPerformed(evt);
+            }
+        });
 
         btnKK2.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         btnKK2.setText("Làm mới");
         btnKK2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnKK2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKK2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -121,12 +136,11 @@ public class frmKiemKe extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnKK1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnKK2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnKK, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnKK2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnKK1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 7, Short.MAX_VALUE))
         );
 
         btnThoat.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
@@ -159,7 +173,7 @@ public class frmKiemKe extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -171,6 +185,28 @@ public class frmKiemKe extends javax.swing.JFrame {
     private void btnThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThoatActionPerformed
         this.setVisible(false);
     }//GEN-LAST:event_btnThoatActionPerformed
+
+    private void btnKK1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKK1ActionPerformed
+         khoThietBilist = KhoThietBiModify.kiemke2();
+        tableModel.setRowCount(0);
+        for (KhoThietBi tb : khoThietBilist) {
+            tableModel.addRow(new Object[]{tableModel.getRowCount() + 1, tb.getMaTB(),tb.getTenTB(),tb.getGiaMua(),tb.getGiaBan(),tb.getSoLuong(),
+                               tb.getNgaySanXuat(),tb.getNgayNhap(),tb.getNhaCungCap(),tb.getTongtien()});
+        }
+    }//GEN-LAST:event_btnKK1ActionPerformed
+
+    private void btnKKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKKActionPerformed
+       khoThietBilist = KhoThietBiModify.kiemke();
+        tableModel.setRowCount(0);
+        for (KhoThietBi tb : khoThietBilist) {
+            tableModel.addRow(new Object[]{tableModel.getRowCount() + 1, tb.getMaTB(),tb.getTenTB(),tb.getGiaMua(),tb.getGiaBan(),tb.getSoLuong(),
+                               tb.getNgaySanXuat(),tb.getNgayNhap(),tb.getNhaCungCap(),tb.getTongtien()});
+        }
+    }//GEN-LAST:event_btnKKActionPerformed
+
+    private void btnKK2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKK2ActionPerformed
+        ShowKho();
+    }//GEN-LAST:event_btnKK2ActionPerformed
 
     /**
      * @param args the command line arguments
