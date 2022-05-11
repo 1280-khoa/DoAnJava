@@ -66,6 +66,7 @@ DefaultTableModel tableModel;
         });
 
         btnupdate.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnupdate.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Downloads\\image\\icons8-refresh-30 (2).png")); // NOI18N
         btnupdate.setText("Cập nhật");
         btnupdate.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +76,7 @@ DefaultTableModel tableModel;
         });
 
         btnThoat.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnThoat.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Downloads\\image\\icons8-logout-30.png")); // NOI18N
         btnThoat.setText("Thoát");
         btnThoat.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnThoat.addActionListener(new java.awt.event.ActionListener() {

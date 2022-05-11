@@ -27,6 +27,10 @@ public class KhoThietBi {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    public KhoThietBi(String MaTB1, String TenTB, String GiaBan, String SoLuong1) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public String getMaTB() {
         return MaTB;
     }

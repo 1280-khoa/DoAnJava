@@ -80,14 +80,11 @@ public class frmKH extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
-        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(153, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("QUẢN LÝ THÔNG TIN KHÁCH HÀNG");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(6, 6, 640, 32);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nhập thông tin khách hàng:"));
 
@@ -157,9 +154,9 @@ public class frmKH extends javax.swing.JFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                    .addComponent(txtSDT, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                    .addComponent(cbbGT, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtEmail)
+                    .addComponent(txtSDT)
+                    .addComponent(cbbGT, 0, 170, Short.MAX_VALUE))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -198,12 +195,10 @@ public class frmKH extends javax.swing.JFrame {
                 .addGap(0, 9, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(10, 40, 640, 160);
-
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("CHỨC NĂNG"));
 
         btnThem.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnThem.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Downloads\\image\\icons8-create-document-30.png")); // NOI18N
         btnThem.setText("Thêm");
         btnThem.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnThem.addActionListener(new java.awt.event.ActionListener() {
@@ -213,6 +208,7 @@ public class frmKH extends javax.swing.JFrame {
         });
 
         btnXoa.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnXoa.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Downloads\\image\\icons8-delete-30 (1).png")); // NOI18N
         btnXoa.setText("Xóa");
         btnXoa.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnXoa.addActionListener(new java.awt.event.ActionListener() {
@@ -222,6 +218,7 @@ public class frmKH extends javax.swing.JFrame {
         });
 
         btnSua.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnSua.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Downloads\\image\\icons8-change-30 (1).png")); // NOI18N
         btnSua.setText("Sửa");
         btnSua.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSua.addActionListener(new java.awt.event.ActionListener() {
@@ -231,6 +228,7 @@ public class frmKH extends javax.swing.JFrame {
         });
 
         btnLM.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnLM.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Downloads\\image\\icons8-refresh-30 (2).png")); // NOI18N
         btnLM.setText("Làm mới");
         btnLM.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnLM.addActionListener(new java.awt.event.ActionListener() {
@@ -240,6 +238,7 @@ public class frmKH extends javax.swing.JFrame {
         });
 
         btnThoat.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnThoat.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Downloads\\image\\icons8-logout-30.png")); // NOI18N
         btnThoat.setText("Thoát");
         btnThoat.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnThoat.addActionListener(new java.awt.event.ActionListener() {
@@ -249,6 +248,7 @@ public class frmKH extends javax.swing.JFrame {
         });
 
         btnTK.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnTK.setIcon(new javax.swing.ImageIcon("C:\\Users\\PC\\Downloads\\image\\icons8-find-30 (1).png")); // NOI18N
         btnTK.setText("Tìm kiếm");
         btnTK.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnTK.addActionListener(new java.awt.event.ActionListener() {
@@ -289,9 +289,6 @@ public class frmKH extends javax.swing.JFrame {
                     .addComponent(btnThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
-
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(10, 430, 640, 80);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Danh sách khách hàng"));
 
@@ -335,8 +332,35 @@ public class frmKH extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel3);
-        jPanel3.setBounds(10, 200, 640, 230);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel1)
+                .addGap(2, 2, 2)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -405,7 +429,7 @@ public class frmKH extends javax.swing.JFrame {
             tableModel.setRowCount(0);
 
             khachhanglist.forEach((KhachHang) -> {
-                tableModel.addRow(new Object[]{tableModel.getRowCount() + 1, KhachHang.getTenKH(),
+                tableModel.addRow(new Object[]{tableModel.getRowCount() + 1,KhachHang.getMaKH(), KhachHang.getTenKH(),
                     KhachHang.getNamSinh(), KhachHang.getGioiTinh(), KhachHang.getDiaChi(), KhachHang.getEmail(),KhachHang.getSDT()});
             });
         } else {

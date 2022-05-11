@@ -22,7 +22,7 @@ public class XuatKhoModify {
         Statement stm = null;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/DoAnJava", "root", "123456a@");
-            String mySql = "select * from XuatKhoThietBi";
+            String mySql = "select * from XuatKhoThietBi ";
             stm= conn.createStatement();
             ResultSet rs =  stm.executeQuery(mySql);
             while (rs.next()){
@@ -55,7 +55,7 @@ public class XuatKhoModify {
          PreparedStatement stm = null;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/DoAnJava", "root", "123456a@");
-            String mySql = "insert into XuatKhoThietBi(MaHD,MaKH,MaTB,GiaSanPham,SoLuong,TongTien,NgayXuat)values (?,?,?,?,?,?,?)";
+            String mySql = "insert into XuatKhoThietBi(MaHD,MaKH,MaTB,GiaSanPham,SoLuong,TongTien,NgayXuat)values (?,?,?,?,?,?,?)  ";
             stm = conn.prepareCall(mySql);
             stm.setString(1, TB.getMaHD());
             stm.setString(2, TB.getMaKH());
@@ -261,6 +261,7 @@ public class XuatKhoModify {
         
         return "";
     } 
-      
-    
 }
+    
+    
+
